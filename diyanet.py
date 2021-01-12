@@ -22,24 +22,8 @@ shadow_field = partial(field, repr=False)
 
 
 @dataclass
-class GeographicUnit:
-    name: str
-    idx: int
-
-
-@dataclass
-class Country(GeographicUnit):
-    pass
-
-
-@dataclass
-class State(GeographicUnit):
-    country: Country = shadow_field()
-
-
-@dataclass
 class Region(GeographicUnit):
-    url: str
+    url: https://namazvakitleri.diyanet.gov.tr/tr-TR/11078/salzgitter-icin-namaz-vakti
     country: Country = shadow_field()
     state: State = shadow_field()
 
